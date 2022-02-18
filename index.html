@@ -1,0 +1,442 @@
+<!-- Présentation originale récupérée sur https://github.com/KhaledMohamedP/dcPrecent -->
+<!-- Icone de Fontawesome 4.2.0 : https://www.karmecholing.org/wp-content/plugins/Font-Awesome-WordPress-Plugin-master/assets/FontAwesomeIconsCheatsheet.pdf -->
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>🗺 Creating functional diversity maps</title>
+    <!-- <link href='http://fonts.googleapis.com/css?family=Archivo+Black' rel='stylesheet' type='text/css'> -->
+      <link rel="stylesheet" href="css/impress-TFA.css"  />
+      <link rel="stylesheet" href="css/impress-KLEMET.css"  />
+      <link rel="stylesheet" href="lib/faws/css/font-awesome.min.css"/>
+      <link rel="stylesheet" href="lib/animate.css"/>
+      <link rel="stylesheet" href="js/highlight/styles/github.min.css">
+  </head>
+  <body ng-app>
+    <div id="impress">
+      <!-- Intro Slide  -->
+      <div class="step opacity words" data-x="0"  data-y="-1000"  data-z="0" style="height: 400px; width: 800px;" data-scale="3">
+        <h1 class="colorTitle fa fa-tree fa-5x textCenter"></h1>
+        <div class="em4">Creating functional diversity maps</div>
+          <div style="position: absolute; bottom: 0px; left: 0px;">
+          <div class="em1">Clément Hardy, PhD student in biology</div>
+          <div class="em1">Supervized by Élise Filotas et Christian Messier</div>
+          <br>
+          <img src="./img/Université_du_Québec_à_Montréal_Logo.svg" style="height:50px; margin-right: 40px;"/>
+          <img src="./img/logo_teluq_header.svg" style="height:50px; margin-right: 40px;"/>
+        </div>
+      </div>
+
+      <!-- Overview -->
+      <div id="overview" class="step section-intro opacity words" data-x="0"  data-y="3000" data-z="0" data-scale="10">
+        <center><div class="em4">
+          <br><br><br>
+          ON THE MENU TODAY
+          <i class="colorTitle fa fa-glass"></i>
+        </div></center>
+      </div>
+
+      <!-- Obtaining and selecting traits intro -->
+      <div id="obtainingTraits" class="step section-intro opacity words" data-rel-x="-6000"  data-rel-y="1000" data-rel-z="0" data-scale="3" data-rel-to="overview">
+        <div class="em3">
+          <center>OBTAINING AND SELECTING TRAITS</center>
+        </div>
+        <div class="ext-box" style="margin-top: 40px;">
+          <img class="substep int-box" src="./img/tree_characteristics.png" style="height:300px;"/>
+          <table class="substep int-box">
+              <tr>
+                <th>Species</th>
+                <th>Max height</th>
+                <th>Leaf size</th>
+                <th>Fire tolerance</th>
+              </tr>
+              <tr>
+                <td>Ab. bal.</td>
+                <td>25</td>
+                <td>1</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <td>Tsu. Can.</td>
+                <td>30</td>
+                <td>1</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <td>...</td>
+                <td>...</td>
+                <td>...</td>
+                <td>...</td>
+              </tr>
+            </table> 
+        </div>
+        <div class="substep" style="margin-top: 40px;">
+          <a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1466-8238.2010.00592.x">Paquette and Messier (2011)</a> and other sources :<br><br>
+          Average maximum height, 
+          Growth rate, 
+          Leaf size, 
+          Wood density, 
+          Wood decay resistance, 
+          Vegetative reproduction, 
+          Seed mass, 
+          Abiotic pollination, 
+          Biotic pollination, 
+          Shade tolerance, 
+          Drought tolerance, 
+          Waterlogging tolerance, 
+          Arbuscular mycorrhiza (Endomycorrhiza ), 
+          Ectomycorrhiza, 
+          Leaf longevity, 
+          Leaf mass per area, 
+          Nitrogen content per leaf mass unit, 
+          Post-fire regen, 
+          Sexual maturity age, 
+          Fire tolerance, 
+          Maximal seed dispersal distance. <br><br>
+        </div>
+        <div class="substep">
+          Selection with <a href="http://www.nrcresearchpress.com/doi/10.1139/er-2015-0072">Aubin et al. (2016)</a> : resilience to fire, to drought, dispersal.
+        </div>
+        <div class="substep" style="margin-top: 40px;">
+          <img src="./img/trait_matrix.png" style="width:100%;"/>
+        </div>
+      </div>
+
+      <!-- Warning : we're talking about inter-specific traits -->
+      <div class="step impermanent opacity words" data-rel-x="0"  data-rel-y="0" data-rel-z="0" data-rotate-y="90"  data-scale="3">
+        <center>
+        <div class="substep">
+          <span style="font-family: 'Segoe UI Emoji'; font-size:10em;">⚠</span>
+        </div>
+        <div class="substep em4" style="margin-top: 100px">
+          <del>Intra-specific variability</del>
+        </div>
+        <div class="substep em4" style="margin-top: 100px">
+          Inter-specific variability = trait average for the species
+        </div>
+        </center>
+      </div>
+
+      <!-- Traits are averaged for north america -->
+      <div class="step opacity words" data-rel-x="0"  data-rel-y="3000" data-rel-z="0"  data-scale="3">
+        <center>
+        <div class="substep">
+          <img src="./img/canada_map.png" style="width:100%;"/>
+        </div>
+        <div class="substep em4" style="margin-top: 100px">
+          Averaged for North America
+        </div>
+        </center>
+      </div>
+
+      <!-- Obtening biomass data intro -->
+      <div class="step section-intro opacity words" data-rel-x="-2000"  data-rel-y="1000" data-rel-z="0" data-scale="3" data-rel-to="overview">
+        <div class="em3">
+          <center>OBTAINING BIOMASS DATA</center>
+        </div>
+        <center><div class="substep"><img src="./img/LANDIS-II.png" style="width:70%; margin-top: 40px;"/></div>
+        <div class="ext-box" style="margin-top: 40px;">
+          <img class="substep int-box" src="./img/biomass_rasters.png" style="width:400px;"/>
+          <div class="substep int-box"><i class="fa fa-arrow-right" style="font-size: 5em;"></i></div>
+          <div class="substep int-box"><table style="width:100px">
+              <tr>
+                <th>Assemblage (pixel)</th>
+                <th>Ab. bal. biomass</th>
+                <th>Tsu. Can. biomass</th>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>456</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>321</td>
+                <td>123</td>
+              </tr>
+              <tr>
+                <td>...</td>
+                <td>...</td>
+                <td>...</td>
+              </tr>
+            </table></div>
+        </div></center>
+      </div>
+
+      <!-- Aggregation maps -->
+      <div id="aggregationMaps" class="step opacity words" data-rel-x="0"  data-rel-y="2500" data-rel-z="0"  data-scale="3">
+        <div class="em3">
+          <center>AGGREGATING THE BIOMASS DATA</center>
+        </div>
+        <div class="ext-box">
+          <div class="substep int-box"><center>
+            <img src="./img/abie_biomass_notAgg.png" style="width:40%; margin-top: 40px;"/>
+            <img src="./img/abie_biomass_Agg.png" style="width:40%; margin-top: 40px;"/>
+          </center></div>
+        </div>
+      </div>
+
+      <!-- Zooming on aggregated map to show 30x30pixel of aggregation -->
+      <div class="step opacity words" data-rel-x="515"  data-rel-y="11" data-rel-z="0"  data-scale="0.08" data-rel-to="aggregationMaps">
+        <div class="substep"><center><img src="./img/30x30pixelAgg.svg" style="width:15%; padding-right: 50px; padding-bottom: 40px;"/></center></div>
+        </div> 
+
+      <!-- Zooming on non aggregated map to see lakes -->
+      <div class="step opacity words" data-rel-x="-850"  data-rel-y="-200" data-rel-z="0"  data-scale="0.5" data-rel-to="aggregationMaps">
+        </div>
+
+      <!-- Zooming on aggregated map to indicate pixels of non forest -->
+      <div class="step opacity words" data-rel-x="515"  data-rel-y="11" data-rel-z="0"  data-scale="0.08" data-rel-to="aggregationMaps">
+        <div class="substep" style="background-color: #fefae0; width: 200px; padding: 20px 20px 20px 20px;">< 75% of forest pixels <br> = not forest</div>
+      </div> 
+
+      <!-- Computing functional diversity : intro -->
+      <div id="computingIndices" class="step section-intro opacity words" data-rel-x="2000"  data-rel-y="1000" data-rel-z="0" data-scale="3" data-rel-to="overview">
+        <div class="em3">
+          <center>COMPUTING FUNCTIONAL DIVERSITY</center>
+        </div>
+        <div class="bar substep" style="margin-top:100px;">
+          <ul>
+            <li class="substep">Loading everything in the right format</li>
+            <li class="substep">Calculating species distances</li>
+            <li class="substep">Computing functional spaces with PCoA</li>
+            <li class="substep">Choosing the best functional space</li>
+            <li class="substep">Computing the indices</li>
+          </ul>
+        </div>
+      </div>
+
+    <!-- Showing the R code for loading things in the right format -->
+    <div class="step opacity words" data-rel-x="0"  data-rel-y="2500" data-rel-z="0"  data-scale="3">
+      <div class="substep em2">Loading everything in the right format</div>
+      <pre class="substep"><code class="language-r">
+head(trait_matrix) # First lines of the trait matrix
+
+         maxH GR LS   WD WDR Veg       SeM  Pa  Pb TolS TolD TolW           AM           EM       LL    LMA    Nmass
+ABIE.BAL   25  1  1 0.34   1   1 2.1517622 yes  no  5.0  1.0  2.0 not possible     possible 4.700480 151.00 1.660000
+ACER.RUB   25  3  3 0.49   1   1 3.0445224 yes yes  3.4  1.8  3.1     possible not possible 1.716796  71.09 1.913838
+ACER.SAH   35  1  3 0.56   1   1 4.1896547 yes yes  4.8  2.3  1.1     possible not possible 1.704748  70.63 1.831675
+BETU.ALL   25  3  2 0.55   1   1 0.7030975 yes  no  3.2  3.0  2.0 not possible     possible 1.704748  46.08 2.200000
+BETU.PAP   25  3  2 0.48   1   1 0.2851789 yes  no  1.5  2.0  1.3 not possible     possible 1.280934  77.88 2.310000
+FAGU.GRA   25  1  2 0.56   1   2 5.6594822 yes  no  4.8  1.5  1.5 not possible     possible 1.609438  61.22 2.040000
+      </code></pre>
+
+      <pre class="substep"><code class="language-r">
+head(trait_matrix_cat) # First lines of the trait caracteristics matrix
+
+  trait_name trait_type trait_weight
+1       maxH          Q            1
+2         GR          O            1
+3         LS          O            1
+4         WD          Q            1
+5        WDR          O            1
+6        Veg          O            1
+      </code></pre>
+
+      <pre class="substep"><code class="language-r">
+assemblageMatrix[sample(nrow(assemblageMatrix), 5), ] # Random lines from assemblage matrix
+
+     ABIE.BAL ACER.RUB ACER.SAH BETU.ALL BETU.PAP FAGU.GRA LARI.LAR PICE.GLA PICE.MAR PICE.RUB PINU.BAN PINU.RES PINU.STR
+6221  1586753   520612   230650   107645   391287        0    42470   415233  1052705        0   438396        0    38784
+3457   938507   106647        0        0   554809        0    31317   572673  1372830   103057  1384604        0        0
+8355        0        0        0        0        0        0        0        0        0        0        0        0        0
+631    344505        0        0        0   162236        0    13810    27423  2280018        0   756264        0        0
+7113  1206778   454670   412523   238762   374573    80227     9935   636612   573199  1662082    35090    11988    24756
+      </code></pre>
+
+    </div>
+
+    <!-- Showing the R code for calculating distances -->
+    <div class="step opacity words" data-rel-x="0"  data-rel-y="2500" data-rel-z="0"  data-scale="3">
+      <div class="substep em2">Calculating species distances</div>
+      <pre class="substep"><code class="language-r">
+mFD::funct.dist(
+sp_tr         = trait_matrix,
+tr_cat        = trait_matrix_cat,
+metric        = "gower", # On utilise les distance de gower car on a des traits non continus
+scale_euclid  = "scale_center",
+ordinal_var   = "classic",
+weight_type   = "user", # On utilise les poids définis par notre tableau de carac des traits
+stop_if_NA    = TRUE)
+
+              ABIE.BAL  ACER.RUB  ACER.SAH  BETU.ALL  BETU.PAP  FAGU.GRA  LARI.LAR  PICE.GLA  PICE.MAR  PICE.RUB  PINU.BAN
+ACER.RUB     0.4697516                                                                                                    
+ACER.SAH     0.4377433 0.2075869                                                                                          
+BETU.ALL     0.3612115 0.2539838 0.3050017                                                                                
+BETU.PAP     0.4239350 0.3028323 0.3947954 0.1576505                                                                      
+FAGU.GRA     0.2846232 0.4173136 0.3040228 0.2577247 0.2939224                                                            
+LARI.LAR     0.3283239 0.3714178 0.4993606 0.2640120 0.3036585 0.3633346                                                  
+PICE.GLA     0.1848600 0.5270425 0.4493687 0.4172546 0.4765593 0.3922787 0.3426827                                        
+PICE.MAR     0.2299780 0.4914855 0.4705883 0.4094442 0.4721676 0.3858443 0.4072472 0.1816143                              
+PICE.RUB     0.1496464 0.5068574 0.5192935 0.3634241 0.4432416 0.3913854 0.2751769 0.1094079 0.2063126                    
+PINU.BAN     0.4007496 0.4515138 0.5174297 0.3603703 0.3589912 0.5137603 0.2922069 0.2467839 0.2618282 0.2857470          
+PINU.RES     0.3384460 0.4791053 0.5039957 0.3551556 0.4050585 0.4474870 0.2500878 0.1704184 0.3176755 0.2039425 0.1633759
+PINU.STR     0.3223904 0.4173378 0.4576127 0.3667340 0.3850130 0.4272641 0.2241878 0.2430380 0.3899036 0.2795825 0.2383699
+POPU.TRE     0.4316025 0.2529703 0.3761910 0.2200811 0.1044399 0.3612765 0.3538639 0.4642024 0.4511698 0.4616915 0.3637941
+QUER.RUB     0.4971892 0.3347671 0.2930824 0.2582421 0.2809227 0.2989472 0.4254766 0.4707787 0.5120855 0.5082249 0.4537988
+THUJ.SPP.ALL 0.3145076 0.5284897 0.4883007 0.4749568 0.5371919 0.4138132 0.3929694 0.3020578 0.2961858 0.3185660 0.4105402
+TSUG.CAN     0.1687720 0.5269340 0.4145838 0.3999275 0.4489758 0.2968728 0.2924479 0.2116418 0.3098149 0.2046880 0.3519128
+      </code></pre>
+    </div>
+
+    <!-- Showing the R code for computing functional spaces -->
+    <div id="functionalSpacePlot" class="step opacity words" data-rel-x="0"  data-rel-y="2500" data-rel-z="0"  data-scale="3">
+      <div class="substep em2">Computing functional spaces with PCoA</div>
+      <pre class="substep"><code class="language-r">
+mFD::quality.fspaces(
+sp_dist             = distanceBetweenSpeciesWithTraits,
+maxdim_pcoa         = 10,
+deviation_weighting = c("absolute", "squarred"),
+fdist_scaling       = FALSE,
+fdendro             = "average")
+
+mFD::quality.fspaces.plot(
+  fspaces_quality            = functionalSpaces,
+  quality_metric             = "mad",
+  fspaces_plot               = axisNames[1:min(c(length(functionalSpaces$quality_fspace[,1]) - 1, 6))],
+  name_file                  = NULL,
+  range_dist                 = NULL,
+  range_dev                  = NULL,
+  range_qdev                 = NULL,
+  gradient_deviation         = c(neg = "darkblue", nul = "grey80", pos = "darkred"),
+  gradient_deviation_quality = c(low = "yellow", high = "red"),
+  x_lab                      = "Trait-based distance")
+      </code></pre>
+      <div class="substep em2">Choosing the best functional space</div>
+      <center><img class="substep" src="./img/plot_quality_spaces.png" style="width:`100%; margin-top: 40px;"/></center>
+    </div>
+
+    <!-- Zooming on the "5D" plot-->
+    <div class="step" data-rel-x="600" data-rel-y="250" data-scale="1" data-rel-to="functionalSpacePlot">
+    </div>
+
+    <!-- Showing the R code for computing the indices and explaining theme -->
+    <div class="step opacity words" data-rel-x="0"  data-rel-y="2800" data-rel-z="0"  data-scale="3" data-rel-to="functionalSpacePlot">
+      <div class="substep em2">Computing the indices</div>
+      <div class="substep em1 substep" style="margin-top:40px;">⚠ Only for assemblages with<br>number of species > number of PCoA axis (5)</div>
+      <pre class="substep"><code class="language-r">
+measures <- c("fdis", "fric")
+alpha_fd_indices <- mFD::alpha.fd.multidim(
+  sp_faxes_coord   = axisCoordinates,
+  asb_sp_w         = assemblagesWithAdequateNumberOfSpcies,
+  ind_vect         = measures,
+  scaling          = TRUE,
+  check_input      = TRUE,
+  details_returned = FALSE,
+  verbose = TRUE)
+      </code></pre>
+      <pre class="substep"><code class="language-r">
+head(alpha_fd_indices$functional_diversity_indices)
+
+   sp_richn      fdis       fric
+14        8 0.8114983 0.08193873
+15        7 0.6069372 0.01937401
+16        8 0.5855955 0.02469629
+17        7 0.6764044 0.01937401
+18        8 0.7342161 0.08193873
+19        9 0.5574832 0.09137770
+      </code></pre>   
+
+      <div class="ext-box" style="width:1000px;"><center>
+        <img class="int-box substep" src="./img/Fdis_exlanation.png" style="height:250px; margin-top: 40px;"/>
+        <img class="int-box substep" src="./img/Fric_explanation.png" style="height:250px; margin-top: 40px;"/>
+      </center></div>
+    </div>
+
+    <!-- Presenting some results - first, species richness and shannon diversity index -->
+    <div id="results" class="step section-intro opacity words" data-rel-x="6000"  data-rel-y="1000" data-rel-z="0" data-scale="3" data-rel-to="overview">
+      <div class="em3">
+        <center>SOME RESULTS</center>
+      </div>
+      <div class="substep em2" style="margin-top: 40px">Species diversity</div>
+      <div class="ext-box" style="width:1000px;"><center>
+        <img class="int-box substep" src="./img/result_sp_richness.png" style="width:50%; margin-top: 40px;"/>
+        <img class="int-box substep" src="./img/result_shannon_index.png" style="width:50%; margin-top: 40px;"/>
+      </center></div>
+    </div>
+
+    <!-- Results for all traits -->
+    <div class="step opacity words" data-rel-x="0"  data-rel-y="2500" data-rel-z="0"  data-scale="3">
+      <div class="substep em2">Functional diversity - For all traits</div>
+      <div class="ext-box" style="width:1000px;"><center>
+        <img class="int-box substep" src="./img/result_fdis_allTraits.png" style="width:50%; margin-top: 40px;"/>
+        <img class="int-box substep" src="./img/result_fric_allTraits.png" style="width:50%; margin-top: 40px;"/>
+      </center></div>
+    </div>
+
+    <!-- Results for fire traits -->
+    <div class="step" data-rel-x="0" data-rel-y="2500" data-scale="3">
+      <div class="substep em2">Functional diversity - Resilience to fire</div>
+      <div class="ext-box" style="width:1000px;"><center>
+        <img class="int-box substep" src="./img/result_fdis_fireTraits.png" style="width:50%; margin-top: 40px;"/>
+        <img class="int-box substep" src="./img/result_fric_fireTraits.png" style="width:50%; margin-top: 40px;"/>
+      </center></div>
+    </div>
+
+    <!-- Results for drought traits -->
+    <div class="step" data-rel-x="0" data-rel-y="2500" data-scale="3">
+      <div class="substep em2">Functional diversity - Resilience to drought</div>
+      <div class="ext-box" style="width:1000px;"><center>
+        <img class="int-box substep" src="./img/result_fdis_droughtTraits.png" style="width:50%; margin-top: 40px;"/>
+        <img class="int-box substep" src="./img/result_fric_droughtTraits.png" style="width:50%; margin-top: 40px;"/>
+      </center></div>
+    </div>
+
+    <!-- Results for dispersal traits -->
+    <div class="step" data-rel-x="0" data-rel-y="2500" data-scale="3">
+      <div class="substep em2">Functional diversity - Dispersal traits</div>
+      <div class="ext-box" style="width:1000px;"><center>
+        <img class="int-box substep" src="./img/result_fdis_dispersalTraits.png" style="width:50%; margin-top: 40px;"/>
+        <img class="int-box substep" src="./img/result_fric_dispersalTraits.png" style="width:50%; margin-top: 40px;"/>
+      </center></div>
+    </div>
+
+    <!-- Overview and thank you -->
+    <div class="step" data-x="-14000" data-y="6000" data-z="40000" data-scale="3">
+      <div class="substep" style="width:50%;">
+        <div class="em3">
+          <center>THANK<br>YOU <i class="colorTitle fa fa-heart" style="font-size: 1em;"></i></center>
+        </div>
+        <center><div class="ext-box" style="width:400px; margin-top:40px;">
+            <img class="int-box" src="./img/avatar_clement_circle.png" style="width:100px;"/>
+            <div class="int-box">
+              <i class="colorTitle fa fa-link" style="font-size: 1.5em;"></i>
+              <a href="https://klemet.github.io">klemet.github.io</a><br>
+              <i class="colorTitle fa fa-github" style="font-size: 1.5em;"></i>
+              <a href="https://github.com/Klemet">github.com/Klemet</a><br>
+              <i class="colorTitle fa fa-envelope-o" style="font-size: 1.5em;"></i>
+              clem.hardy@outlook.fr<br>
+            </div>
+          </div></center>
+        </div>
+      </div>
+    </div>
+
+
+    </div> <!-- end of .impress -->
+
+    
+    <!-- Displaying navigation toolbar, help, etc. -->
+    <!-- <div id="impress-toolbar"></div> -->
+    <div id="impress-help"></div>
+    <div class="impress-progressbar"><div></div></div>
+    <div class="impress-progress"></div>
+
+    <!-- Loading extra js libraries for markdown and highlight. -->
+    <script type="text/javascript" src="js/highlight/highlight.min.js"></script>
+    <script type="text/javascript" src="lib/mermaid/mermaid.min.js"></script>
+    <script type="text/javascript" src="lib/markdown.js"></script>
+
+    <!-- Loading main js libraries, including impress. -->
+    <!-- <script src="lib/jquery-2.1.1.min.js"></script> -->
+    <script src="js/custom.js"></script>
+    <script src="lib/substep.js"></script>
+    <script src="lib/impress.js"></script>
+
+    <!-- Making impress.js initialize the extra libraries, among other things. -->
+    <script>impress().init();</script>
+  </body>
+</html>

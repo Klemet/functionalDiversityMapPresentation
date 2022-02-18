@@ -1,0 +1,104 @@
+/*font style*/
+.ext-box { display: table;}
+.int-box
+{ 
+  display: table-cell;
+  vertical-align: middle;
+}
+/* Toolbar and help menu, from https://getcssscan.com/css-buttons-examples */
+.impress-navigation-ui, .impress-autoplay
+{
+  appearance: none;
+  background-color: #2ea44f;
+  border: none;
+  border-radius: 6px;
+  box-shadow: none;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  font-family: -apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 20px;
+  margin: 2px 2px 2px 2px ;
+  padding: 6px 6px 6px 6px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.button-3:focus:not(:focus-visible):not(.focus-visible) {
+  box-shadow: none;
+  outline: none;
+}
+
+.button-3:hover {
+  background-color: #2c974b;
+}
+
+.button-3:focus {
+  box-shadow: rgba(46, 164, 79, .4) 0 0 0 3px;
+  outline: none;
+}
+
+.button-3:disabled {
+  background-color: #94d3a2;
+  border-color: rgba(27, 31, 35, .1);
+  color: rgba(255, 255, 255, .8);
+  cursor: default;
+}
+
+.button-3:active {
+  background-color: #298e46;
+  box-shadow: rgba(20, 70, 32, .2) 0 1px 0 inset;
+}
+#impress-help
+{
+  font-family: 'Lato', 'Open sans', 'Helvetica';
+  font-size: 10pt;
+  padding: 0px; 
+  width: 600px;
+  margin-top: 20px;
+}
+/* Steps with class "impermanent" should disapear when not active anymore */
+.impress-enabled .step.impermanent {
+  opacity: 0;
+}
+.impress-enabled .step.impermanent.active { opacity: 1 }
+/* Steps that are the introduction to a section should have a fixed height,
+so that their position can be aligned vertically */
+.step.section-intro
+{
+  height: 800px;
+}
+/* We step the minimal width for a step. */
+.step
+{
+  width: 1000px;
+}
+/* progressbar and slide number */
+.impress-progressbar {
+  position: absolute;
+  right: 318px;
+  bottom: 1px;
+  left: 118px;
+}
+.impress-progressbar DIV {
+  width: 0;
+  height: 10px;
+  border-radius: 20px;
+  background: #38b000;
+  transition: width 1s linear;
+}
+.impress-progress {
+  position: absolute;
+  left: 59px;
+  bottom: 1px;
+  text-align: left;
+  opacity: 0.6;
+  font-family: 'Lato', 'Open sans', 'Helvetica';
+}
