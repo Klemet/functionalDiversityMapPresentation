@@ -102,3 +102,33 @@ so that their position can be aligned vertically */
   opacity: 0.6;
   font-family: 'Lato', 'Open sans', 'Helvetica';
 }
+
+/* Slide titles */
+.slideTitle{
+  text-align: center; 
+  font-weight: bold; 
+  font-family: 'ArchivoBlacks', sans-serif;
+  text-transform: uppercase;
+  font-size: 3em;
+  margin-bottom: 30px; 
+}
+
+/* Smaller Slide titles */
+.slideTitleSmaller{
+  text-align: left; 
+  font-weight: bold; 
+  font-family: 'ArchivoBlacks', sans-serif;
+  font-size: 2em;
+  margin-bottom: 20px; 
+}
+
+
+/* Overview slide */
+.overview
+{
+  text-align: center; 
+  font-weight: bold; 
+  font-family: 'ArchivoBlacks', sans-serif;
+  text-transform: uppercase;
+  font-size: 4em;
+}
